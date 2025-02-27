@@ -1,10 +1,9 @@
-const products_data = require("../data/products");
-const { v4: uuidv4 } = require('uuid');
+const mock_data = require("../data/products");
+const { v4: uuidv4 } = require("uuid");
 
 // GET
 const getProducts = (req, res) => {
-
-  const updatedProducts = products_data?.map(product => ({
+  const updatedProducts = mock_data.products_data?.map((product) => ({
     ...product,
     id: uuidv4(),
   }));
@@ -17,6 +16,15 @@ const getProducts = (req, res) => {
 };
 
 // GET
+const getProductCategories = (req, res) => {
+  res.status(200).json({
+    status: 200,
+    data:mock_data.categories,
+    message: "successfully fetched",
+  });
+};
+
+// GET
 const getProductDetails = (req, res) => {
   res.status(200).json({
     status: 200,
@@ -24,4 +32,4 @@ const getProductDetails = (req, res) => {
   });
 };
 
-module.exports = { getProducts, getProductDetails };
+module.exports = { getProducts, getProductDetails, getProductCategories };
