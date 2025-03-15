@@ -9,13 +9,13 @@ const app = express();
 connectdb();
 const port = process?.env?.PORT || 5000;
 
-// const corsOptions = {
-//   origin: 'https://example-client.com', // Allow only this origin
-//   methods: ['GET', 'POST'],            // Allow only GET and POST methods
-//   allowedHeaders: ['Content-Type'],    // Allow specific headers
-// };
+const corsOptions = {
+  origin: '*', // Allow only this origin
+  methods: ['GET', 'POST'],            // Allow only GET and POST methods
+  allowedHeaders: ['Content-Type'],    // Allow specific headers
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(express.json())
 app.use(cors());
