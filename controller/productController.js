@@ -15,12 +15,28 @@ const getProducts = (req, res) => {
   });
 };
 
+const getPopularRails = (req, res) => {
+  res.status(200).json({
+    status: 200,
+    data: mock_data.popular_rails,
+    message: "successfully fetched popular rails",
+  });
+};
+
+const getMenuRails = (req, res) => {
+  res.status(200).json({
+    status: 200,
+    data: mock_data.menu_data,
+    message: "successfully fetched menu rails",
+  });
+};
+
 // GET
 const getProductCategories = (req, res) => {
   res.status(200).json({
     status: 200,
-    data:mock_data.categories,
-    message: "successfully fetched",
+    data: mock_data.categories,
+    message: "successfully fetched categories",
   });
 };
 
@@ -32,4 +48,10 @@ const getProductDetails = (req, res) => {
   });
 };
 
-module.exports = { getProducts, getProductDetails, getProductCategories };
+module.exports = {
+  getProducts,
+  getProductDetails,
+  getProductCategories,
+  getPopularRails,
+  getMenuRails,
+};
