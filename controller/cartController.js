@@ -2,8 +2,8 @@ const Cart = require("../models/cartModel");
 const asyncHandler = require("express-async-handler");
 
 // POST
-const createCart = asyncHandler(async (req, res) => {
-  const {id, is_admin } = req.body;
+const createCart = asyncHandler(async (req, res, next) => {
+  const { id, is_admin } = req.body;
 
   if (!id || !is_admin) {
     res.status(401);
@@ -14,7 +14,7 @@ const createCart = asyncHandler(async (req, res) => {
     const cart = await Cart.create({
       id,
       is_admin,
-      user_id:req?.user?.id
+      user_id: req?.user?.id,
     });
     res.status(201).json({
       status: 201,
@@ -23,6 +23,7 @@ const createCart = asyncHandler(async (req, res) => {
     });
   } catch (err) {
     res.status(400);
+    next(err);
     throw new Error("Bad request");
   }
 });

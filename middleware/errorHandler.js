@@ -1,6 +1,9 @@
 const CONSTANST = require("../constants");
 
 const errorHandler = (err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
   const status = res.statusCode || 500;
 
   switch (status) {
@@ -10,6 +13,7 @@ const errorHandler = (err, req, res, next) => {
         status: res?.statusCode,
         message: err?.message,
       });
+      break;
     default:
       res.json({
         status: res?.statusCode,
