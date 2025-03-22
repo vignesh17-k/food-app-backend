@@ -575,7 +575,7 @@ const mock_data = {
   ],
   popular_rails: [
     {
-      id: 1,
+      id: '039cfb66-d83c-4624-857b-fd412d8a1482',
       name: "Hamburger",
       description: "Chicken patty hamburger",
       categories: [1],
@@ -585,7 +585,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/hamburger.png`,
     },
     {
-      id: 2,
+      id: '5a10741e-c65f-4371-8eb5-8834c05165d2',
       name: "Hot Tacos",
       description: "Mexican tortilla & tacos",
       categories: [1],
@@ -595,7 +595,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/hot_tacos.png`,
     },
     {
-      id: 3,
+      id: 'ece307b8-fb71-4ffc-a9e3-a279ad8310e5',
       name: "Veg Biryani",
       description: "Indian Vegetable Biryani",
       categories: [3],
@@ -605,7 +605,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/veg_biryani.png`,
     },
     {
-      id: 4,
+      id: '9c4ce9fa-c8f6-4e60-9192-fc89d5e084bf',
       name: "Wrap Sandwich",
       description: "Grilled vegetables sandwich",
       categories: [1, 6],
@@ -615,7 +615,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/wrap_sandwich.png`,
     },
     {
-      id: 5,
+      id: 'f29cea83-2af0-4470-b501-fa512c71a132',
       name: "Margarita Pizza",
       description: "Classic Margarita Pizza with fresh basil",
       categories: [8],
@@ -625,7 +625,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/pizza.png`,
     },
     {
-      id: 6,
+      id: '8ac8fab1-201c-4957-8242-d9272e9fddce',
       name: "Caesar Salad",
       description: "Crispy romaine lettuce with Caesar dressing",
       categories: [6],
@@ -635,7 +635,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/salad.png`,
     },
     {
-      id: 7,
+      id: 'd09f3bef-94ef-4acc-9283-eab195a32d33',
       name: "Chocolate Cake",
       description: "Rich and moist chocolate layered cake",
       categories: [5],
@@ -645,7 +645,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/cake.png`,
     },
     {
-      id: 8,
+      id: 'b9bfcc0d-21dd-4fa9-8832-a278e5170cde',
       name: "Lemon Iced Tea",
       description: "Chilled iced tea with a tangy lemon twist",
       categories: [4],
@@ -655,7 +655,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/lemon_iced_tea.png`,
     },
     {
-      id: 9,
+      id: 'd833023d-b4e3-473c-87d3-8083941e3122',
       name: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and Parmesan",
       categories: [7],
@@ -665,7 +665,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/spaghetti.png`,
     },
     {
-      id: 10,
+      id: '2224792c-2584-40dd-aecd-164d563e7a31',
       name: "Fruit Salad",
       description: "Fresh seasonal fruits in a bowl",
       categories: [2, 6],
@@ -675,7 +675,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/fruit_bowl.png`,
     },
     {
-      id: 11,
+      id: '578887eb-e0b2-4969-ab3b-c8908d47c580',
       name: "Chicken Nuggets",
       description: "Golden crispy chicken nuggets",
       categories: [1],
@@ -689,7 +689,7 @@ const mock_data = {
       },
     },
     {
-      id: 12,
+      id: 'bf03af06-eb89-428a-a80a-23e3c542aae0',
       name: "Orange Juice",
       description: "Freshly squeezed orange juice",
       categories: [4],
@@ -699,7 +699,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/orange_juice.png`,
     },
     {
-      id: 13,
+      id: '386d7839-4ebd-4f6f-b65b-e588d055a38e',
       name: "Grilled Chicken",
       description: "Juicy grilled chicken breast",
       categories: [1, 6],
@@ -709,7 +709,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/grilled_chicken.png`,
     },
     {
-      id: 14,
+      id: 'e0304073-50db-4eb4-b5d4-76c6142381e6',
       name: "Mango Smoothie",
       description: "Creamy mango-flavored smoothie",
       categories: [4],
@@ -719,7 +719,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/mango_smoothie.png`,
     },
     {
-      id: 15,
+      id: '2a0f772a-9e8e-41d6-ac9b-880efd653a47',
       name: "Brownie",
       description: "Chewy and gooey chocolate brownie",
       categories: [5],
@@ -729,7 +729,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/brownie.png`,
     },
     {
-      id: 16,
+      id: 'eb2e716a-bd24-4974-b56d-8b5dd48f4263',
       name: "Cheese Pasta",
       description: "Pasta in rich and creamy cheese sauce",
       categories: [7],
@@ -739,7 +739,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/cheese_pasta.png`,
     },
     {
-      id: 17,
+      id: 'f14de698-7027-4e5e-a25b-dcc87416f5fc',
       name: "Ice Cream Sundae",
       description: "Ice cream with chocolate syrup and nuts",
       categories: [5],
@@ -749,7 +749,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/ice_cream_sundae.png`,
     },
     {
-      id: 18,
+      id: '93252f65-d1fc-4ed0-8062-3052c3f5b0c2',
       name: "Veggie Burger",
       description: "Burger with a grilled vegetable patty",
       categories: [1, 6],
@@ -759,7 +759,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/veggie_burger.png`,
     },
     {
-      id: 19,
+      id: 'f2196c31-d105-44a6-9b79-cb521b79b24a',
       name: "Chicken Alfredo",
       description: "Fettuccine pasta with Alfredo sauce",
       categories: [7],
@@ -769,7 +769,7 @@ const mock_data = {
       image: `${URL}/assets/dummyData/chicken_alfredo.png`,
     },
     {
-      id: 20,
+      id: '82740b67-ef63-4c65-b9fb-f06c692b476a',
       name: "Garlic Bread",
       description: "Toasted bread with garlic butter",
       categories: [8],
