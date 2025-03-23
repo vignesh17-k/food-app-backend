@@ -39,6 +39,7 @@ const getCart = asyncHandler(async (req, res) => {
     });
   } catch (err) {
     res.status(404);
+    next(err);
     throw new Error("Cart not found");
   }
 });
@@ -54,6 +55,7 @@ const getCartDetails = asyncHandler(async (req, res) => {
     });
   } catch (err) {
     res.status(404);
+    next(err);
     throw new Error("Cart not found");
   }
 });
