@@ -11,6 +11,7 @@ const getWishlistData = expressAsyncHandler(async (req, res) => {
       message: "successfully fetched wishlist data",
     });
   } catch (error) {
+    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
@@ -44,6 +45,7 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
       message: "Product added to wishlist successfully",
     });
   } catch (error) {
+    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
@@ -63,6 +65,7 @@ const removeProductFromWishlist = expressAsyncHandler(async (req, res) => {
       message: "Product removed from wishlist successfully",
     });
   } catch (error) {
+    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
