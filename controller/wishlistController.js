@@ -2,6 +2,10 @@ const expressAsyncHandler = require("express-async-handler");
 const Wishlist = require("../models/wishlistModel");
 
 const getWishlistData = expressAsyncHandler(async (req, res) => {
+  if (!req.user || !req.user.id) {
+    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  }
+
   try {
     const wishlist = await Wishlist.findOne({ user_id: req?.user?.id });
 
@@ -11,12 +15,15 @@ const getWishlistData = expressAsyncHandler(async (req, res) => {
       message: "successfully fetched wishlist data",
     });
   } catch (error) {
-    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
 
 const addProductToWishlist = expressAsyncHandler(async (req, res) => {
+  if (!req.user || !req.user.id) {
+    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  }
+
   try {
     const product_id = req?.body?.product_id;
     const user_id = req?.user?.id;
@@ -45,12 +52,15 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
       message: "Product added to wishlist successfully",
     });
   } catch (error) {
-    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
 
 const removeProductFromWishlist = expressAsyncHandler(async (req, res) => {
+  if (!req.user || !req.user.id) {
+    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+  }
+
   try {
     let wishlist = await Wishlist.findOne({ user_id: req?.user?.id });
 
@@ -65,9 +75,12 @@ const removeProductFromWishlist = expressAsyncHandler(async (req, res) => {
       message: "Product removed from wishlist successfully",
     });
   } catch (error) {
-    next(err);
     res.status(500).json({ message: "Server error", error });
   }
 });
 
-module.exports = { getWishlistData, addProductToWishlist , removeProductFromWishlist };
+module.exports = {
+  getWishlistData,
+  addProductToWishlist,
+  removeProductFromWishlist,
+};
