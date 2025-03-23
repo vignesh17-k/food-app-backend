@@ -1,5 +1,6 @@
 const expressAsyncHandler = require("express-async-handler");
 const Wishlist = require("../models/wishlistModel");
+const mock_data = require("../data/products");
 
 const getWishlistData = expressAsyncHandler(async (req, res) => {
   if (!req.user || !req.user.id) {
@@ -41,9 +42,23 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
         user_id: user_id,
         products: [],
       });
+    } else {
+      const product_exist = wishlist?.products?.find(
+        (p) => p.id !== req?.params?.product_id
+      );
+      if (product_exist) {
+        return res.status(400).json({
+          status: 400,
+          message: "Product already exists in wishlist",
+        });
+      }
     }
 
-    wishlist.products.push({ product_id });
+    const product_data = mock_data.products_data.find(
+      (p) => p.id === product_id
+    );
+
+    wishlist.products.push(product_data);
 
     await wishlist.save();
 
@@ -65,7 +80,7 @@ const removeProductFromWishlist = expressAsyncHandler(async (req, res) => {
     let wishlist = await Wishlist.findOne({ user_id: req?.user?.id });
 
     wishlist.products = wishlist?.products?.filter(
-      (p) => p.product_id !== req?.params?.product_id
+      (p) => p?.id !== req?.params?.product_id
     );
 
     await wishlist.save();
