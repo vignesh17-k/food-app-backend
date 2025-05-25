@@ -21,7 +21,7 @@ const getWishlistData = expressAsyncHandler(async (req, res) => {
 });
 
 const addProductToWishlist = expressAsyncHandler(async (req, res) => {
-  if (!req.user || !req.user.id) {
+  if (!req?.user || !req.user?.id) {
     return res.status(401).json({ message: "Unauthorized: Invalid token" });
   }
 
