@@ -10,7 +10,7 @@ const mock_data = {
       price: 15.99,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/hamburger.png`,
+      image: `${URL}/dummyData/hamburger.png`,
     },
     {
       id: '5a10741e-c65f-4371-8eb5-8834c05165d2',
@@ -20,7 +20,7 @@ const mock_data = {
       price: 10.99,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/hot_tacos.png`,
+      image: `${URL}/dummyData/hot_tacos.png`,
     },
     {
       id: 'ece307b8-fb71-4ffc-a9e3-a279ad8310e5',
@@ -30,7 +30,7 @@ const mock_data = {
       price: 12.99,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/veg_biryani.png`,
+      image: `${URL}/dummyData/veg_biryani.png`,
     },
     {
       id: '9c4ce9fa-c8f6-4e60-9192-fc89d5e084bf',
@@ -40,7 +40,7 @@ const mock_data = {
       price: 10.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/wrap_sandwich.png`,
+      image: `${URL}/dummyData/wrap_sandwich.png`,
     },
     {
       id: 'f29cea83-2af0-4470-b501-fa512c71a132',
@@ -50,7 +50,7 @@ const mock_data = {
       price: 14.99,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/pizza.png`,
+      image: `${URL}/dummyData/pizza.png`,
     },
     {
       id: '8ac8fab1-201c-4957-8242-d9272e9fddce',
@@ -60,7 +60,7 @@ const mock_data = {
       price: 8.99,
       calories: 120,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/salad.png`,
+      image: `${URL}/dummyData/salad.png`,
     },
     {
       id: 'd09f3bef-94ef-4acc-9283-eab195a32d33',
@@ -70,7 +70,7 @@ const mock_data = {
       price: 6.99,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/cake.png`,
+      image: `${URL}/dummyData/cake.png`,
     },
     {
       id: 'b9bfcc0d-21dd-4fa9-8832-a278e5170cde',
@@ -80,7 +80,7 @@ const mock_data = {
       price: 4.99,
       calories: 80,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/lemon_iced_tea.png`,
+      image: `${URL}/dummyData/lemon_iced_tea.png`,
     },
     {
       id: 'd833023d-b4e3-473c-87d3-8083941e3122',
@@ -90,7 +90,7 @@ const mock_data = {
       price: 13.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/spaghetti.png`,
+      image: `${URL}/dummyData/spaghetti.png`,
     },
     {
       id: '2224792c-2584-40dd-aecd-164d563e7a31',
@@ -100,7 +100,7 @@ const mock_data = {
       price: 7.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/fruit_bowl.png`,
+      image: `${URL}/dummyData/fruit_bowl.png`,
     },
     {
       id: '578887eb-e0b2-4969-ab3b-c8908d47c580',
@@ -110,7 +110,7 @@ const mock_data = {
       price: 9.99,
       calories: 250,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_nuggets.png`,
+      image: `${URL}/dummyData/chicken_nuggets.png`,
       style: {
         width: "100%",
         height: 120,
@@ -124,7 +124,7 @@ const mock_data = {
       price: 5.99,
       calories: 90,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/orange_juice.png`,
+      image: `${URL}/dummyData/orange_juice.png`,
     },
     {
       id: '386d7839-4ebd-4f6f-b65b-e588d055a38e',
@@ -134,7 +134,7 @@ const mock_data = {
       price: 11.99,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/grilled_chicken.png`,
+      image: `${URL}/dummyData/grilled_chicken.png`,
     },
     {
       id: 'e0304073-50db-4eb4-b5d4-76c6142381e6',
@@ -144,7 +144,7 @@ const mock_data = {
       price: 6.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/mango_smoothie.png`,
+      image: `${URL}/dummyData/mango_smoothie.png`,
     },
     {
       id: '2a0f772a-9e8e-41d6-ac9b-880efd653a47',
@@ -154,7 +154,7 @@ const mock_data = {
       price: 4.99,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/brownie.png`,
+      image: `${URL}/dummyData/brownie.png`,
     },
     {
       id: 'eb2e716a-bd24-4974-b56d-8b5dd48f4263',
@@ -164,7 +164,7 @@ const mock_data = {
       price: 12.99,
       calories: 400,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/cheese_pasta.png`,
+      image: `${URL}/dummyData/cheese_pasta.png`,
     },
     {
       id: 'f14de698-7027-4e5e-a25b-dcc87416f5fc',
@@ -174,7 +174,7 @@ const mock_data = {
       price: 5.49,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/ice_cream_sundae.png`,
+      image: `${URL}/dummyData/ice_cream_sundae.png`,
     },
     {
       id: '93252f65-d1fc-4ed0-8062-3052c3f5b0c2',
@@ -184,7 +184,7 @@ const mock_data = {
       price: 11.49,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/veggie_burger.png`,
+      image: `${URL}/dummyData/veggie_burger.png`,
     },
     {
       id: 'f2196c31-d105-44a6-9b79-cb521b79b24a',
@@ -194,7 +194,7 @@ const mock_data = {
       price: 13.49,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_alfredo.png`,
+      image: `${URL}/dummyData/chicken_alfredo.png`,
     },
     {
       id: '82740b67-ef63-4c65-b9fb-f06c692b476a',
@@ -204,7 +204,7 @@ const mock_data = {
       price: 5.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/garlic_bread.png`,
+      image: `${URL}/dummyData/garlic_bread.png`,
     },
     {
       id: 21,
@@ -215,7 +215,7 @@ const mock_data = {
       price: 12.99,
       calories: 400,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/grilled_chicken_burger.png`,
+      image: `${URL}/dummyData/grilled_chicken_burger.png`,
     },
     {
       id: 22,
@@ -225,7 +225,7 @@ const mock_data = {
       price: 14.99,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/veggie_pizza_2.png`,
+      image: `${URL}/dummyData/veggie_pizza_2.png`,
     },
     {
       id: 23,
@@ -235,7 +235,7 @@ const mock_data = {
       price: 18.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/grilled_salmon.png`,
+      image: `${URL}/dummyData/grilled_salmon.png`,
     },
     {
       id: 24,
@@ -245,7 +245,7 @@ const mock_data = {
       price: 5.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/strawberry_cake.png`,
+      image: `${URL}/dummyData/strawberry_cake.png`,
     },
     {
       id: 25,
@@ -255,7 +255,7 @@ const mock_data = {
       price: 9.99,
       calories: 400,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/buffalo_wing.png`,
+      image: `${URL}/dummyData/buffalo_wing.png`,
     },
     {
       id: 26,
@@ -265,7 +265,7 @@ const mock_data = {
       price: 12.99,
       calories: 380,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/mushroom_risotto.png`,
+      image: `${URL}/dummyData/mushroom_risotto.png`,
     },
     {
       id: 27,
@@ -275,7 +275,7 @@ const mock_data = {
       price: 16.99,
       calories: 600,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_pizza.png`,
+      image: `${URL}/dummyData/chicken_pizza.png`,
     },
     {
       id: 28,
@@ -285,7 +285,7 @@ const mock_data = {
       price: 5.49,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/panna_cotta_2.png`,
+      image: `${URL}/dummyData/panna_cotta_2.png`,
     },
     {
       id: 29,
@@ -295,7 +295,7 @@ const mock_data = {
       price: 10.49,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/falafel_wrap.png`,
+      image: `${URL}/dummyData/falafel_wrap.png`,
     },
     {
       id: 30,
@@ -305,7 +305,7 @@ const mock_data = {
       price: 22.99,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/beef_steak.png`,
+      image: `${URL}/dummyData/beef_steak.png`,
     },
     {
       id: 31,
@@ -315,7 +315,7 @@ const mock_data = {
       price: 12.99,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/steak_sandwich.png`,
+      image: `${URL}/dummyData/steak_sandwich.png`,
     },
     {
       id: 32,
@@ -325,7 +325,7 @@ const mock_data = {
       price: 9.99,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/tuna_salad.png`,
+      image: `${URL}/dummyData/tuna_salad.png`,
     },
     {
       id: 33,
@@ -335,7 +335,7 @@ const mock_data = {
       price: 8.99,
       calories: 250,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/macarons.png`,
+      image: `${URL}/dummyData/macarons.png`,
     },
     {
       id: 34,
@@ -345,7 +345,7 @@ const mock_data = {
       price: 5.99,
       calories: 250,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/berry_smoothie.png`,
+      image: `${URL}/dummyData/berry_smoothie.png`,
     },
     {
       id: 35,
@@ -355,7 +355,7 @@ const mock_data = {
       price: 10.49,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/penne_arrabbiata.png`,
+      image: `${URL}/dummyData/penne_arrabbiata.png`,
     },
     {
       id: 36,
@@ -365,7 +365,7 @@ const mock_data = {
       price: 9.49,
       calories: 520,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/shrimp_rice.png`,
+      image: `${URL}/dummyData/shrimp_rice.png`,
     },
     {
       id: 37,
@@ -375,7 +375,7 @@ const mock_data = {
       price: 7.99,
       calories: 320,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/salad_2.png`,
+      image: `${URL}/dummyData/salad_2.png`,
     },
     {
       id: 38,
@@ -385,7 +385,7 @@ const mock_data = {
       price: 7.99,
       calories: 250,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/soup.png`,
+      image: `${URL}/dummyData/soup.png`,
     },
     {
       id: 39,
@@ -395,7 +395,7 @@ const mock_data = {
       price: 4.99,
       calories: 180,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/fried_potato.png`,
+      image: `${URL}/dummyData/fried_potato.png`,
     },
     {
       id: 40,
@@ -405,7 +405,7 @@ const mock_data = {
       price: 19.99,
       calories: 550,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/peking_duck.png`,
+      image: `${URL}/dummyData/peking_duck.png`,
     },
     {
       id: 41,
@@ -415,7 +415,7 @@ const mock_data = {
       price: 14.99,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/sushi_rolls.png`,
+      image: `${URL}/dummyData/sushi_rolls.png`,
     },
     {
       id: 42,
@@ -425,7 +425,7 @@ const mock_data = {
       price: 15.49,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_parmesan.png`,
+      image: `${URL}/dummyData/chicken_parmesan.png`,
     },
     {
       id: 43,
@@ -435,7 +435,7 @@ const mock_data = {
       price: 5.99,
       calories: 360,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/apple_pie.png`,
+      image: `${URL}/dummyData/apple_pie.png`,
     },
     {
       id: 44,
@@ -445,7 +445,7 @@ const mock_data = {
       price: 9.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/pulled_pork.png`,
+      image: `${URL}/dummyData/pulled_pork.png`,
     },
     {
       id: 45,
@@ -455,7 +455,7 @@ const mock_data = {
       price: 10.99,
       calories: 550,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/biryani.png`,
+      image: `${URL}/dummyData/biryani.png`,
     },
     {
       id: 46,
@@ -465,7 +465,7 @@ const mock_data = {
       price: 8.99,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/beef_burritos.png`,
+      image: `${URL}/dummyData/beef_burritos.png`,
     },
     {
       id: 47,
@@ -475,7 +475,7 @@ const mock_data = {
       price: 8.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/tiramisu.png`,
+      image: `${URL}/dummyData/tiramisu.png`,
     },
     {
       id: 48,
@@ -485,7 +485,7 @@ const mock_data = {
       price: 7.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/grilled_veggie.png`,
+      image: `${URL}/dummyData/grilled_veggie.png`,
     },
     {
       id: 49,
@@ -495,7 +495,7 @@ const mock_data = {
       price: 12.49,
       calories: 600,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/mutton_biryani.png`,
+      image: `${URL}/dummyData/mutton_biryani.png`,
     },
     {
       id: 50,
@@ -505,29 +505,29 @@ const mock_data = {
       price: 10.49,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/ramen_soup.png`,
+      image: `${URL}/dummyData/ramen_soup.png`,
     },
   ],
   categories: [
     {
       id: 1,
       name: "Fast Food",
-      icon: `${URL}/assets/dummyData/icons/burger.png`,
+      icon: `${URL}/dummyData/icons/burger.png`,
     },
     {
       id: 2,
       name: "Fruit Item",
-      icon: `${URL}/assets/dummyData/icons/cherry.png`,
+      icon: `${URL}/dummyData/icons/cherry.png`,
     },
     {
       id: 3,
       name: "Rice Item",
-      icon: `${URL}/assets/dummyData/icons/rice.png`,
+      icon: `${URL}/dummyData/icons/rice.png`,
     },
     {
       id: 4,
       name: "Beverages",
-      icon: `${URL}/assets/dummyData/icons/drinks.png`,
+      icon: `${URL}/dummyData/icons/drinks.png`,
       style: {
         width: 35,
         height: 35,
@@ -536,7 +536,7 @@ const mock_data = {
     {
       id: 5,
       name: "Desserts",
-      icon: `${URL}/assets/dummyData/icons/desserts.png`,
+      icon: `${URL}/dummyData/icons/desserts.png`,
       style: {
         width: 35,
         height: 35,
@@ -545,7 +545,7 @@ const mock_data = {
     {
       id: 6,
       name: "Salads",
-      icon: `${URL}/assets/dummyData/icons/salad.png`,
+      icon: `${URL}/dummyData/icons/salad.png`,
       style: {
         width: 35,
         height: 35,
@@ -555,7 +555,7 @@ const mock_data = {
     {
       id: 7,
       name: "Pasta",
-      icon: `${URL}/assets/dummyData/icons/pasta.png`,
+      icon: `${URL}/dummyData/icons/pasta.png`,
       style: {
         width: 35,
         height: 35,
@@ -565,7 +565,7 @@ const mock_data = {
     {
       id: 8,
       name: "Pizza",
-      icon: `${URL}/assets/dummyData/icons/pizza.png`,
+      icon: `${URL}/dummyData/icons/pizza.png`,
       style: {
         width: 35,
         height: 35,
@@ -582,7 +582,7 @@ const mock_data = {
       price: 15.99,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/hamburger.png`,
+      image: `${URL}/dummyData/hamburger.png`,
     },
     {
       id: '5a10741e-c65f-4371-8eb5-8834c05165d2',
@@ -592,7 +592,7 @@ const mock_data = {
       price: 10.99,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/hot_tacos.png`,
+      image: `${URL}/dummyData/hot_tacos.png`,
     },
     {
       id: 'ece307b8-fb71-4ffc-a9e3-a279ad8310e5',
@@ -602,7 +602,7 @@ const mock_data = {
       price: 12.99,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/veg_biryani.png`,
+      image: `${URL}/dummyData/veg_biryani.png`,
     },
     {
       id: '9c4ce9fa-c8f6-4e60-9192-fc89d5e084bf',
@@ -612,7 +612,7 @@ const mock_data = {
       price: 10.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/wrap_sandwich.png`,
+      image: `${URL}/dummyData/wrap_sandwich.png`,
     },
     {
       id: 'f29cea83-2af0-4470-b501-fa512c71a132',
@@ -622,7 +622,7 @@ const mock_data = {
       price: 14.99,
       calories: 500,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/pizza.png`,
+      image: `${URL}/dummyData/pizza.png`,
     },
     {
       id: '8ac8fab1-201c-4957-8242-d9272e9fddce',
@@ -632,7 +632,7 @@ const mock_data = {
       price: 8.99,
       calories: 120,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/salad.png`,
+      image: `${URL}/dummyData/salad.png`,
     },
     {
       id: 'd09f3bef-94ef-4acc-9283-eab195a32d33',
@@ -642,7 +642,7 @@ const mock_data = {
       price: 6.99,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/cake.png`,
+      image: `${URL}/dummyData/cake.png`,
     },
     {
       id: 'b9bfcc0d-21dd-4fa9-8832-a278e5170cde',
@@ -652,7 +652,7 @@ const mock_data = {
       price: 4.99,
       calories: 80,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/lemon_iced_tea.png`,
+      image: `${URL}/dummyData/lemon_iced_tea.png`,
     },
     {
       id: 'd833023d-b4e3-473c-87d3-8083941e3122',
@@ -662,7 +662,7 @@ const mock_data = {
       price: 13.99,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/spaghetti.png`,
+      image: `${URL}/dummyData/spaghetti.png`,
     },
     {
       id: '2224792c-2584-40dd-aecd-164d563e7a31',
@@ -672,7 +672,7 @@ const mock_data = {
       price: 7.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/fruit_bowl.png`,
+      image: `${URL}/dummyData/fruit_bowl.png`,
     },
     {
       id: '578887eb-e0b2-4969-ab3b-c8908d47c580',
@@ -682,7 +682,7 @@ const mock_data = {
       price: 9.99,
       calories: 250,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_nuggets.png`,
+      image: `${URL}/dummyData/chicken_nuggets.png`,
       style: {
         width: "100%",
         height: 120,
@@ -696,7 +696,7 @@ const mock_data = {
       price: 5.99,
       calories: 90,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/orange_juice.png`,
+      image: `${URL}/dummyData/orange_juice.png`,
     },
     {
       id: '386d7839-4ebd-4f6f-b65b-e588d055a38e',
@@ -706,7 +706,7 @@ const mock_data = {
       price: 11.99,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/grilled_chicken.png`,
+      image: `${URL}/dummyData/grilled_chicken.png`,
     },
     {
       id: 'e0304073-50db-4eb4-b5d4-76c6142381e6',
@@ -716,7 +716,7 @@ const mock_data = {
       price: 6.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/mango_smoothie.png`,
+      image: `${URL}/dummyData/mango_smoothie.png`,
     },
     {
       id: '2a0f772a-9e8e-41d6-ac9b-880efd653a47',
@@ -726,7 +726,7 @@ const mock_data = {
       price: 4.99,
       calories: 200,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/brownie.png`,
+      image: `${URL}/dummyData/brownie.png`,
     },
     {
       id: 'eb2e716a-bd24-4974-b56d-8b5dd48f4263',
@@ -736,7 +736,7 @@ const mock_data = {
       price: 12.99,
       calories: 400,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/cheese_pasta.png`,
+      image: `${URL}/dummyData/cheese_pasta.png`,
     },
     {
       id: 'f14de698-7027-4e5e-a25b-dcc87416f5fc',
@@ -746,7 +746,7 @@ const mock_data = {
       price: 5.49,
       calories: 300,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/ice_cream_sundae.png`,
+      image: `${URL}/dummyData/ice_cream_sundae.png`,
     },
     {
       id: '93252f65-d1fc-4ed0-8062-3052c3f5b0c2',
@@ -756,7 +756,7 @@ const mock_data = {
       price: 11.49,
       calories: 350,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/veggie_burger.png`,
+      image: `${URL}/dummyData/veggie_burger.png`,
     },
     {
       id: 'f2196c31-d105-44a6-9b79-cb521b79b24a',
@@ -766,7 +766,7 @@ const mock_data = {
       price: 13.49,
       calories: 450,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/chicken_alfredo.png`,
+      image: `${URL}/dummyData/chicken_alfredo.png`,
     },
     {
       id: '82740b67-ef63-4c65-b9fb-f06c692b476a',
@@ -776,7 +776,7 @@ const mock_data = {
       price: 5.99,
       calories: 150,
       isFavorite: false,
-      image: `${URL}/assets/dummyData/garlic_bread.png`,
+      image: `${URL}/dummyData/garlic_bread.png`,
     },
   ],
   menu_data: [
@@ -793,7 +793,7 @@ const mock_data = {
           price: 12.99,
           calories: 400,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/grilled_chicken_burger.png`,
+          image: `${URL}/dummyData/grilled_chicken_burger.png`,
         },
         {
           id: 22,
@@ -803,7 +803,7 @@ const mock_data = {
           price: 14.99,
           calories: 500,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/veggie_pizza_2.png`,
+          image: `${URL}/dummyData/veggie_pizza_2.png`,
         },
         {
           id: 23,
@@ -813,7 +813,7 @@ const mock_data = {
           price: 18.99,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/grilled_salmon.png`,
+          image: `${URL}/dummyData/grilled_salmon.png`,
         },
         {
           id: 24,
@@ -823,7 +823,7 @@ const mock_data = {
           price: 5.99,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/strawberry_cake.png`,
+          image: `${URL}/dummyData/strawberry_cake.png`,
         },
         {
           id: 25,
@@ -833,7 +833,7 @@ const mock_data = {
           price: 9.99,
           calories: 400,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/buffalo_wing.png`,
+          image: `${URL}/dummyData/buffalo_wing.png`,
         },
       ],
     },
@@ -849,7 +849,7 @@ const mock_data = {
           price: 12.99,
           calories: 380,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/mushroom_risotto.png`,
+          image: `${URL}/dummyData/mushroom_risotto.png`,
         },
         {
           id: 27,
@@ -859,7 +859,7 @@ const mock_data = {
           price: 16.99,
           calories: 600,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/chicken_pizza.png`,
+          image: `${URL}/dummyData/chicken_pizza.png`,
         },
         {
           id: 28,
@@ -869,7 +869,7 @@ const mock_data = {
           price: 5.49,
           calories: 200,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/panna_cotta_2.png`,
+          image: `${URL}/dummyData/panna_cotta_2.png`,
         },
         {
           id: 29,
@@ -879,7 +879,7 @@ const mock_data = {
           price: 10.49,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/falafel_wrap.png`,
+          image: `${URL}/dummyData/falafel_wrap.png`,
         },
         {
           id: 30,
@@ -889,7 +889,7 @@ const mock_data = {
           price: 22.99,
           calories: 500,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/beef_steak.png`,
+          image: `${URL}/dummyData/beef_steak.png`,
         },
       ],
     },
@@ -905,7 +905,7 @@ const mock_data = {
           price: 12.99,
           calories: 500,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/steak_sandwich.png`,
+          image: `${URL}/dummyData/steak_sandwich.png`,
         },
         {
           id: 32,
@@ -915,7 +915,7 @@ const mock_data = {
           price: 9.99,
           calories: 200,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/tuna_salad.png`,
+          image: `${URL}/dummyData/tuna_salad.png`,
         },
         {
           id: 33,
@@ -925,7 +925,7 @@ const mock_data = {
           price: 8.99,
           calories: 250,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/macarons.png`,
+          image: `${URL}/dummyData/macarons.png`,
         },
         {
           id: 34,
@@ -935,7 +935,7 @@ const mock_data = {
           price: 5.99,
           calories: 250,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/berry_smoothie.png`,
+          image: `${URL}/dummyData/berry_smoothie.png`,
         },
         {
           id: 35,
@@ -945,7 +945,7 @@ const mock_data = {
           price: 10.49,
           calories: 500,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/penne_arrabbiata.png`,
+          image: `${URL}/dummyData/penne_arrabbiata.png`,
         },
       ],
     },
@@ -961,7 +961,7 @@ const mock_data = {
           price: 9.49,
           calories: 520,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/shrimp_rice.png`,
+          image: `${URL}/dummyData/shrimp_rice.png`,
         },
         {
           id: 37,
@@ -971,7 +971,7 @@ const mock_data = {
           price: 7.99,
           calories: 320,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/salad_2.png`,
+          image: `${URL}/dummyData/salad_2.png`,
         },
         {
           id: 38,
@@ -981,7 +981,7 @@ const mock_data = {
           price: 7.99,
           calories: 250,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/soup.png`,
+          image: `${URL}/dummyData/soup.png`,
         },
         {
           id: 39,
@@ -991,7 +991,7 @@ const mock_data = {
           price: 4.99,
           calories: 180,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/fried_potato.png`,
+          image: `${URL}/dummyData/fried_potato.png`,
         },
         {
           id: 40,
@@ -1001,7 +1001,7 @@ const mock_data = {
           price: 19.99,
           calories: 550,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/peking_duck.png`,
+          image: `${URL}/dummyData/peking_duck.png`,
         },
       ],
     },
@@ -1017,7 +1017,7 @@ const mock_data = {
           price: 14.99,
           calories: 300,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/sushi_rolls.png`,
+          image: `${URL}/dummyData/sushi_rolls.png`,
         },
         {
           id: 42,
@@ -1027,7 +1027,7 @@ const mock_data = {
           price: 15.49,
           calories: 500,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/chicken_parmesan.png`,
+          image: `${URL}/dummyData/chicken_parmesan.png`,
         },
         {
           id: 43,
@@ -1037,7 +1037,7 @@ const mock_data = {
           price: 5.99,
           calories: 360,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/apple_pie.png`,
+          image: `${URL}/dummyData/apple_pie.png`,
         },
         {
           id: 44,
@@ -1047,7 +1047,7 @@ const mock_data = {
           price: 9.99,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/pulled_pork.png`,
+          image: `${URL}/dummyData/pulled_pork.png`,
         },
         {
           id: 45,
@@ -1057,7 +1057,7 @@ const mock_data = {
           price: 10.99,
           calories: 550,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/biryani.png`,
+          image: `${URL}/dummyData/biryani.png`,
         },
       ],
     },
@@ -1073,7 +1073,7 @@ const mock_data = {
           price: 8.99,
           calories: 450,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/beef_burritos.png`,
+          image: `${URL}/dummyData/beef_burritos.png`,
         },
         {
           id: 3,
@@ -1083,7 +1083,7 @@ const mock_data = {
           price: 8.99,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/tiramisu.png`,
+          image: `${URL}/dummyData/tiramisu.png`,
         },
         {
           id: 26,
@@ -1093,7 +1093,7 @@ const mock_data = {
           price: 7.99,
           calories: 150,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/grilled_veggie.png`,
+          image: `${URL}/dummyData/grilled_veggie.png`,
         },
         {
           id: 57,
@@ -1103,7 +1103,7 @@ const mock_data = {
           price: 12.49,
           calories: 600,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/mutton_biryani.png`,
+          image: `${URL}/dummyData/mutton_biryani.png`,
         },
         {
           id: 27,
@@ -1113,7 +1113,7 @@ const mock_data = {
           price: 10.49,
           calories: 350,
           isFavorite: false,
-          image: `${URL}/assets/dummyData/ramen_soup.png`,
+          image: `${URL}/dummyData/ramen_soup.png`,
         },
       ],
     },
