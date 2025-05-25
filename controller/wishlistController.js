@@ -44,7 +44,7 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
       });
     } else {
       const product_exist = wishlist?.products?.find(
-        (p) => p.id === product_id
+        (p) => p?.id === product_id
       );
       if (product_exist) {
         return res.status(400).json({
@@ -54,8 +54,8 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
       }
     }
 
-    const product_data = mock_data.products_data.find(
-      (p) => p.id === product_id
+    const product_data = mock_data?.products_data?.find(
+      (p) => p?.id === product_id
     );
 
     wishlist.products.push(product_data);
