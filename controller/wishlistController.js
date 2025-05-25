@@ -44,7 +44,7 @@ const addProductToWishlist = expressAsyncHandler(async (req, res) => {
       });
     } else {
       const product_exist = wishlist?.products?.find(
-        (p) => p.id !== req?.params?.product_id
+        (p) => p.id === product_id
       );
       if (product_exist) {
         return res.status(400).json({
