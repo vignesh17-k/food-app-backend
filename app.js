@@ -20,9 +20,10 @@ app.use(cors(corsOptions));
 
 app.use(express.json())
 app.use('/api/products', require('./routes/getProducts'));
+app.use("/api/wishlist", require('./routes/wishlist'));
+
 app.use("/api/cart", require('./routes/cart'));
 app.use("/api/user", require('./routes/user'));
-app.use("/api/wishlist", require('./routes/wishlist'));
 app.use(errorHandler)
 
 app.listen(port, () => {
