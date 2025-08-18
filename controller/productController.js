@@ -1,11 +1,11 @@
 const mock_data = require("../data/products");
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 
 // GET
 const getProducts = (req, res) => {
   const updatedProducts = mock_data.products_data?.map((product) => ({
     ...product,
-    id: uuidv4(),
+    // id: uuidv4(),
   }));
 
   res.status(200).json({
