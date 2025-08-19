@@ -62,8 +62,13 @@ const getProductCategories = (req, res) => {
 
 // GET
 const getProductDetails = (req, res) => {
+  const product = mock_data.product_details.find(
+    (product) => product?.id === req?.params?.id
+  );
+
   res.status(200).json({
     status: 200,
+    data: product,
     message: `successfully fetched detail ${req?.params?.id}`,
   });
 };
