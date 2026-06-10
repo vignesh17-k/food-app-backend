@@ -23,6 +23,7 @@ app.use('/api/products', require('./routes/getProducts'));
 app.use("/api/wishlist", require('./routes/wishlist'));
 app.use("/api/cart", require('./routes/cart'));
 app.use("/api/user", require('./routes/user'));
+app.use("/api/contact", require('./routes/contact'));
 app.use(errorHandler)
 
 app.listen(port, () => {
