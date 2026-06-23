@@ -1,15 +1,10 @@
 const express = require("express");
-const {
-  createCart,
-  getCart,
-  getCartDetails,
-} = require("../controller/cartController");
+const { getCartDetails, updateProductToCart } = require("../controller/cartController");
 const validateRoutes = require("../middleware/validateRoutes");
 const router = express.Router();
-router.use(validateRoutes)
-router.route("/create").post(createCart);
-router.route("/all_cart").get(getCart);
+router.use(validateRoutes);
+
 router.route("/details").get(getCartDetails);
+router.route("/item").post(updateProductToCart);
 
 module.exports = router;
-

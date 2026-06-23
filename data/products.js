@@ -11,6 +11,9 @@ const mock_data = {
       calories: 300,
       isFavorite: false,
       image: `${URL}/dummyData/hamburger.png`,
+      deliveryTime: "20-30 mins",
+      deliveryDistance: 1.5,
+      tags: ["non-veg", "fast-food", "american", "grilled", "savory"],
     },
     {
       id: "5a10741e-c65f-4371-8eb5-8834c05165d2",
@@ -21,6 +24,9 @@ const mock_data = {
       calories: 200,
       isFavorite: false,
       image: `${URL}/dummyData/hot_tacos.png`,
+      deliveryTime: "15-25 mins",
+      deliveryDistance: 2.0,
+      tags: ["non-veg", "mexican", "spicy", "snack"],
     },
     {
       id: "ece307b8-fb71-4ffc-a9e3-a279ad8310e5",
@@ -31,6 +37,9 @@ const mock_data = {
       calories: 450,
       isFavorite: false,
       image: `${URL}/dummyData/veg_biryani.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 3.2,
+      tags: ["veg", "indian", "rice", "savory", "spicy"],
     },
     {
       id: "9c4ce9fa-c8f6-4e60-9192-fc89d5e084bf",
@@ -41,6 +50,9 @@ const mock_data = {
       calories: 150,
       isFavorite: false,
       image: `${URL}/dummyData/wrap_sandwich.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.8,
+      tags: ["veg", "healthy", "snack", "savory", "grilled"],
     },
     {
       id: "f29cea83-2af0-4470-b501-fa512c71a132",
@@ -51,6 +63,9 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/pizza.png`,
+      deliveryTime: "35-45 mins",
+      deliveryDistance: 4.0,
+      tags: ["veg", "italian", "pizza", "baked", "savory"],
     },
     {
       id: "8ac8fab1-201c-4957-8242-d9272e9fddce",
@@ -61,6 +76,9 @@ const mock_data = {
       calories: 120,
       isFavorite: false,
       image: `${URL}/dummyData/salad.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.8,
+      tags: ["veg", "healthy", "salad", "light", "savory"],
     },
     {
       id: "d09f3bef-94ef-4acc-9283-eab195a32d33",
@@ -71,6 +89,9 @@ const mock_data = {
       calories: 450,
       isFavorite: false,
       image: `${URL}/dummyData/cake.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 2.5,
+      tags: ["veg", "dessert", "sweet", "baked", "chocolate"],
     },
     {
       id: "b9bfcc0d-21dd-4fa9-8832-a278e5170cde",
@@ -81,6 +102,9 @@ const mock_data = {
       calories: 80,
       isFavorite: false,
       image: `${URL}/dummyData/lemon_iced_tea.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.5,
+      tags: ["veg", "drink", "refreshing", "tangy", "cold"],
     },
     {
       id: "d833023d-b4e3-473c-87d3-8083941e3122",
@@ -91,6 +115,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/spaghetti.png`,
+      deliveryTime: "25-35 mins",
+      deliveryDistance: 3.0,
+      tags: ["non-veg", "italian", "pasta", "creamy", "savory"],
     },
     {
       id: "2224792c-2584-40dd-aecd-164d563e7a31",
@@ -101,6 +128,9 @@ const mock_data = {
       calories: 150,
       isFavorite: false,
       image: `${URL}/dummyData/fruit_bowl.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.6,
+      tags: ["veg", "healthy", "dessert", "sweet", "fresh"],
     },
     {
       id: "578887eb-e0b2-4969-ab3b-c8908d47c580",
@@ -115,6 +145,9 @@ const mock_data = {
         width: "100%",
         height: 120,
       },
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.2,
+      tags: ["non-veg", "fast-food", "american", "fried", "snack"],
     },
     {
       id: "bf03af06-eb89-428a-a80a-23e3c542aae0",
@@ -125,6 +158,9 @@ const mock_data = {
       calories: 90,
       isFavorite: false,
       image: `${URL}/dummyData/orange_juice.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.5,
+      tags: ["veg", "drink", "fresh", "sweet", "healthy"],
     },
     {
       id: "386d7839-4ebd-4f6f-b65b-e588d055a38e",
@@ -135,6 +171,9 @@ const mock_data = {
       calories: 300,
       isFavorite: false,
       image: `${URL}/dummyData/grilled_chicken.png`,
+      deliveryTime: "20-30 mins",
+      deliveryDistance: 2.2,
+      tags: ["non-veg", "healthy", "grilled", "savory", "protein"],
     },
     {
       id: "e0304073-50db-4eb4-b5d4-76c6142381e6",
@@ -145,6 +184,9 @@ const mock_data = {
       calories: 150,
       isFavorite: false,
       image: `${URL}/dummyData/mango_smoothie.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.7,
+      tags: ["veg", "drink", "sweet", "fresh", "tropical"],
     },
     {
       id: "2a0f772a-9e8e-41d6-ac9b-880efd653a47",
@@ -155,6 +197,9 @@ const mock_data = {
       calories: 200,
       isFavorite: false,
       image: `${URL}/dummyData/brownie.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.0,
+      tags: ["veg", "dessert", "sweet", "baked", "chocolate"],
     },
     {
       id: "eb2e716a-bd24-4974-b56d-8b5dd48f4263",
@@ -165,6 +210,9 @@ const mock_data = {
       calories: 400,
       isFavorite: false,
       image: `${URL}/dummyData/cheese_pasta.png`,
+      deliveryTime: "25-30 mins",
+      deliveryDistance: 2.8,
+      tags: ["veg", "italian", "pasta", "creamy", "savory"],
     },
     {
       id: "f14de698-7027-4e5e-a25b-dcc87416f5fc",
@@ -175,6 +223,9 @@ const mock_data = {
       calories: 300,
       isFavorite: false,
       image: `${URL}/dummyData/ice_cream_sundae.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.3,
+      tags: ["veg", "dessert", "sweet", "cold", "chocolate"],
     },
     {
       id: "93252f65-d1fc-4ed0-8062-3052c3f5b0c2",
@@ -185,6 +236,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/veggie_burger.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 1.9,
+      tags: ["veg", "fast-food", "american", "grilled", "healthy"],
     },
     {
       id: "f2196c31-d105-44a6-9b79-cb521b79b24a",
@@ -195,6 +249,9 @@ const mock_data = {
       calories: 450,
       isFavorite: false,
       image: `${URL}/dummyData/chicken_alfredo.png`,
+      deliveryTime: "25-35 mins",
+      deliveryDistance: 3.1,
+      tags: ["non-veg", "italian", "pasta", "creamy", "savory"],
     },
     {
       id: "82740b67-ef63-4c65-b9fb-f06c692b476a",
@@ -205,6 +262,9 @@ const mock_data = {
       calories: 150,
       isFavorite: false,
       image: `${URL}/dummyData/garlic_bread.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.9,
+      tags: ["veg", "italian", "snack", "baked", "savory"],
     },
     {
       id: "515d4d05-a49d-4c66-8031-d53548f7d903",
@@ -216,8 +276,10 @@ const mock_data = {
       calories: 400,
       isFavorite: false,
       image: `${URL}/dummyData/grilled_chicken_burger.png`,
+      deliveryTime: "20-30 mins",
+      deliveryDistance: 1.7,
+      tags: ["non-veg", "fast-food", "american", "grilled", "savory"],
     },
-
     {
       id: "b79138e9-9f7d-4ae2-8653-af3d76c62684",
       name: "Veggie Pizza",
@@ -227,6 +289,9 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/veggie_pizza_2.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 3.5,
+      tags: ["veg", "italian", "pizza", "baked", "savory"],
     },
     {
       id: "5fa62ee1-c71a-4a5e-810c-b0fd654f14e4",
@@ -237,6 +302,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/grilled_salmon.png`,
+      deliveryTime: "25-35 mins",
+      deliveryDistance: 4.2,
+      tags: ["non-veg", "healthy", "grilled", "seafood", "premium"],
     },
     {
       id: "eff6964e-5048-4e7c-b408-bac08fcae10f",
@@ -247,6 +315,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/strawberry_cake.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 2.3,
+      tags: ["veg", "dessert", "sweet", "baked", "premium"],
     },
     {
       id: "471b5189-59bc-4601-a09c-00133f4b92c7",
@@ -257,8 +328,10 @@ const mock_data = {
       calories: 400,
       isFavorite: false,
       image: `${URL}/dummyData/buffalo_wing.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 1.6,
+      tags: ["non-veg", "american", "spicy", "fried", "snack"],
     },
-
     {
       id: "0b75110f-9930-4354-ae77-d05679668021",
       name: "Mushroom Risotto",
@@ -268,6 +341,9 @@ const mock_data = {
       calories: 380,
       isFavorite: false,
       image: `${URL}/dummyData/mushroom_risotto.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 3.3,
+      tags: ["veg", "italian", "rice", "creamy", "savory"],
     },
     {
       id: "f3c61923-bb82-4a32-bac0-ec7cbb724df9",
@@ -278,6 +354,9 @@ const mock_data = {
       calories: 600,
       isFavorite: false,
       image: `${URL}/dummyData/chicken_pizza.png`,
+      deliveryTime: "35-45 mins",
+      deliveryDistance: 4.1,
+      tags: ["non-veg", "american", "pizza", "bbq", "savory"],
     },
     {
       id: "3a053439-8ef9-4497-b67c-e1e04c8255f9",
@@ -288,6 +367,9 @@ const mock_data = {
       calories: 200,
       isFavorite: false,
       image: `${URL}/dummyData/panna_cotta_2.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.4,
+      tags: ["veg", "italian", "dessert", "sweet", "creamy"],
     },
     {
       id: "99af29bb-de16-43b7-92d5-56a68d11206c",
@@ -298,6 +380,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/falafel_wrap.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.1,
+      tags: ["veg", "middle-eastern", "healthy", "snack", "savory"],
     },
     {
       id: "d3c71a77-dc8d-4069-9403-d98a04e930d2",
@@ -308,8 +393,10 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/beef_steak.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 5.0,
+      tags: ["non-veg", "american", "grilled", "premium", "dinner"],
     },
-
     {
       id: "cdd1178d-2fc8-4c30-a95f-a45912c769a7",
       name: "Steak Sandwich",
@@ -319,6 +406,9 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/steak_sandwich.png`,
+      deliveryTime: "20-30 mins",
+      deliveryDistance: 2.4,
+      tags: ["non-veg", "american", "grilled", "savory", "dinner"],
     },
     {
       id: "64b27837-7f70-4e93-a437-582cc1cd4d28",
@@ -329,6 +419,9 @@ const mock_data = {
       calories: 200,
       isFavorite: false,
       image: `${URL}/dummyData/tuna_salad.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.5,
+      tags: ["non-veg", "healthy", "salad", "seafood", "light"],
     },
     {
       id: "8ca2d2ac-e592-4139-955f-00f20fce361c",
@@ -339,6 +432,9 @@ const mock_data = {
       calories: 250,
       isFavorite: false,
       image: `${URL}/dummyData/macarons.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.2,
+      tags: ["veg", "french", "dessert", "sweet", "premium"],
     },
     {
       id: "f596e4a2-0459-4eeb-bc40-3bc6bc376b7d",
@@ -349,6 +445,9 @@ const mock_data = {
       calories: 250,
       isFavorite: false,
       image: `${URL}/dummyData/berry_smoothie.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.6,
+      tags: ["veg", "drink", "fresh", "healthy", "sweet"],
     },
     {
       id: "7f9fd687-0170-4d96-90ae-b88cd7effdae",
@@ -359,8 +458,10 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/penne_arrabbiata.png`,
+      deliveryTime: "25-30 mins",
+      deliveryDistance: 2.7,
+      tags: ["veg", "italian", "pasta", "spicy", "savory"],
     },
-
     {
       id: "aef0278c-945c-4418-b8be-3df38d570f24",
       name: "Shrimp Fried Rice",
@@ -370,6 +471,9 @@ const mock_data = {
       calories: 520,
       isFavorite: false,
       image: `${URL}/dummyData/shrimp_rice.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 2.0,
+      tags: ["non-veg", "chinese", "rice", "seafood", "savory"],
     },
     {
       id: "b133d3b7-40b5-4733-9559-f953dd5041e1",
@@ -380,6 +484,9 @@ const mock_data = {
       calories: 320,
       isFavorite: false,
       image: `${URL}/dummyData/salad_2.png`,
+      deliveryTime: "10-15 mins",
+      deliveryDistance: 0.8,
+      tags: ["veg", "healthy", "salad", "protein", "light"],
     },
     {
       id: "8401eeba-20ef-4ce9-b66c-b628cb19c564",
@@ -390,6 +497,9 @@ const mock_data = {
       calories: 250,
       isFavorite: false,
       image: `${URL}/dummyData/soup.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 2.1,
+      tags: ["non-veg", "thai", "spicy", "soup", "seafood"],
     },
     {
       id: "0226853d-669d-4274-a3c3-3c41b5353297",
@@ -400,6 +510,9 @@ const mock_data = {
       calories: 180,
       isFavorite: false,
       image: `${URL}/dummyData/fried_potato.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.0,
+      tags: ["veg", "american", "snack", "fried", "sweet"],
     },
     {
       id: "1dc5e967-3ed2-4190-8c48-2a381f742de1",
@@ -410,8 +523,10 @@ const mock_data = {
       calories: 550,
       isFavorite: false,
       image: `${URL}/dummyData/peking_duck.png`,
+      deliveryTime: "35-45 mins",
+      deliveryDistance: 4.5,
+      tags: ["non-veg", "chinese", "premium", "dinner", "crispy"],
     },
-
     {
       id: "ae277135-d8d4-43e4-b7e8-3033d3a7de4a",
       name: "Sushi Rolls",
@@ -421,6 +536,9 @@ const mock_data = {
       calories: 300,
       isFavorite: false,
       image: `${URL}/dummyData/sushi_rolls.png`,
+      deliveryTime: "25-30 mins",
+      deliveryDistance: 3.8,
+      tags: ["non-veg", "japanese", "seafood", "premium", "fresh"],
     },
     {
       id: "6c437e01-e4d9-4b7a-80e7-674b881aecd9",
@@ -431,6 +549,9 @@ const mock_data = {
       calories: 500,
       isFavorite: false,
       image: `${URL}/dummyData/chicken_parmesan.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 3.4,
+      tags: ["non-veg", "italian", "baked", "savory", "dinner"],
     },
     {
       id: "5a66931f-99ce-414d-8f8a-97db3a4d3cea",
@@ -441,6 +562,9 @@ const mock_data = {
       calories: 360,
       isFavorite: false,
       image: `${URL}/dummyData/apple_pie.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 1.9,
+      tags: ["veg", "american", "dessert", "sweet", "baked"],
     },
     {
       id: "961430bc-071a-4a92-af5b-227c4c784b39",
@@ -451,6 +575,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/pulled_pork.png`,
+      deliveryTime: "25-30 mins",
+      deliveryDistance: 2.6,
+      tags: ["non-veg", "american", "bbq", "savory", "dinner"],
     },
     {
       id: "24a56b27-c82c-461f-befd-bfa5a2ab4aa9",
@@ -461,6 +588,9 @@ const mock_data = {
       calories: 550,
       isFavorite: false,
       image: `${URL}/dummyData/biryani.png`,
+      deliveryTime: "30-40 mins",
+      deliveryDistance: 3.0,
+      tags: ["non-veg", "indian", "rice", "spicy", "savory"],
     },
     {
       id: "d368cf77-3293-499e-9d84-8a5290955d34",
@@ -471,6 +601,9 @@ const mock_data = {
       calories: 450,
       isFavorite: false,
       image: `${URL}/dummyData/beef_burritos.png`,
+      deliveryTime: "20-25 mins",
+      deliveryDistance: 1.8,
+      tags: ["non-veg", "mexican", "spicy", "savory", "snack"],
     },
     {
       id: "7875a3e1-ebfd-4880-be76-4feeb439321a",
@@ -481,6 +614,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/tiramisu.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.3,
+      tags: ["veg", "italian", "dessert", "sweet", "coffee"],
     },
     {
       id: "b4fa601c-3749-4e5b-b880-ba7c2f3d41cc",
@@ -491,6 +627,9 @@ const mock_data = {
       calories: 150,
       isFavorite: false,
       image: `${URL}/dummyData/grilled_veggie.png`,
+      deliveryTime: "15-20 mins",
+      deliveryDistance: 1.0,
+      tags: ["veg", "healthy", "grilled", "light", "savory"],
     },
     {
       id: "49748785-cb68-4cd1-b1b0-cebfca2efc93",
@@ -501,6 +640,9 @@ const mock_data = {
       calories: 600,
       isFavorite: false,
       image: `${URL}/dummyData/mutton_biryani.png`,
+      deliveryTime: "35-45 mins",
+      deliveryDistance: 3.6,
+      tags: ["non-veg", "indian", "rice", "spicy", "premium"],
     },
     {
       id: "f00f0953-c20f-4f44-8ec3-310e06ab90da",
@@ -511,6 +653,9 @@ const mock_data = {
       calories: 350,
       isFavorite: false,
       image: `${URL}/dummyData/ramen_soup.png`,
+      deliveryTime: "20-30 mins",
+      deliveryDistance: 2.3,
+      tags: ["non-veg", "japanese", "spicy", "soup", "noodles"],
     },
   ],
   product_details: [

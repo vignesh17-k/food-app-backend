@@ -8,7 +8,7 @@ const {
     getMenuRails
 } = require('../controller/productController')
 
-router.route("/").get(getProducts);
+router.route("/").post(getProducts);
 router.route("/popular").get(getPopularRails);
 router.route("/menu_item").get(getMenuRails);
 router.route("/categories").get(getProductCategories);

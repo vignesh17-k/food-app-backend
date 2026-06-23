@@ -1,17 +1,79 @@
 const mock_data = require("../data/products");
 // const { v4: uuidv4 } = require("uuid");
 
-// GET
+// Parses "25-30 mins" → 30 (upper bound in minutes)
+const parseDeliveryTimeMax = (deliveryTime) => {
+  if (!deliveryTime) return null;
+  const match = deliveryTime.match(/(\d+)/g);
+  if (!match) return null;
+  return Math.max(...match.map(Number));
+};
+
+// POST /products — filters in request body
 const getProducts = (req, res) => {
-  const updatedProducts = mock_data.products_data?.map((product) => ({
-    ...product,
-    // id: uuidv4(),
-  }));
+  const {
+    search,
+    minPrice,
+    maxPrice,
+    minRating,
+    maxRating,
+    maxDeliveryTime,
+    maxDistance,
+    tags,
+  } = req.body;
+
+  const searchTerm = search?.trim().toLowerCase() || null;
+
+  const parsedTags = tags
+    ? (Array.isArray(tags) ? tags : tags.split(",")).map((t) =>
+        String(t).trim().toLowerCase()
+      )
+    : null;
+
+  const filtered = mock_data.products_data?.filter((product) => {
+    if (searchTerm) {
+      const nameMatch = product.name?.toLowerCase().includes(searchTerm);
+      const descMatch = product.description?.toLowerCase().includes(searchTerm);
+      const tagMatch = product.tags?.some((t) =>
+        t.toLowerCase().includes(searchTerm)
+      );
+      if (!nameMatch && !descMatch && !tagMatch) return false;
+    }
+
+    if (minPrice !== undefined && product.price < parseFloat(minPrice))
+      return false;
+    if (maxPrice !== undefined && product.price > parseFloat(maxPrice))
+      return false;
+
+    if (minRating !== undefined && (product.rating ?? 0) < parseFloat(minRating))
+      return false;
+    if (maxRating !== undefined && (product.rating ?? 5) > parseFloat(maxRating))
+      return false;
+
+    if (maxDeliveryTime !== undefined && product.deliveryTime) {
+      const upperMins = parseDeliveryTimeMax(product.deliveryTime);
+      if (upperMins !== null && upperMins > parseFloat(maxDeliveryTime))
+        return false;
+    }
+
+    if (maxDistance !== undefined && product.deliveryDistance !== undefined) {
+      if (product.deliveryDistance > parseFloat(maxDistance)) return false;
+    }
+
+    if (parsedTags && product.tags) {
+      const productTags = product.tags.map((t) => t.toLowerCase());
+      const hasAllTags = parsedTags.every((t) => productTags.includes(t));
+      if (!hasAllTags) return false;
+    }
+
+    return true;
+  });
 
   res.status(200).json({
     status: 200,
-    data: updatedProducts,
+    data: filtered,
     message: "successfully fetched",
+    total: filtered.length,
   });
 };
 

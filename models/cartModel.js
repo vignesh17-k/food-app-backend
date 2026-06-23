@@ -6,8 +6,20 @@ const cartSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    id: { type: String, required: [true, "id is required"] },
-    is_admin: { type: Boolean, required: [true, "is_admin is required"] },
+    products: [
+      {
+        id: { type: String, required: true },
+        name: { type: String, required: true },
+        description: { type: String, required: true },
+        categories: [{ type: Number, required: true }],
+        price: { type: Number, required: true },
+        calories: { type: Number, required: true },
+        isFavorite: { type: Boolean, default: false },
+        image: { type: String, required: true },
+        quantity: { type: Number, default: 1, required: true },
+        added_at: { type: Date, default: Date.now },
+      },
+    ],
   },
   {
     timestamps: true,
@@ -15,5 +27,4 @@ const cartSchema = new mongoose.Schema(
 );
 
 const Cart = mongoose.model("Cart", cartSchema);
-
 module.exports = Cart;
