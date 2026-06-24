@@ -15,8 +15,7 @@ const getProducts = (req, res) => {
     search,
     minPrice,
     maxPrice,
-    minRating,
-    maxRating,
+    rating,
     maxDeliveryTime,
     maxDistance,
     tags,
@@ -45,10 +44,16 @@ const getProducts = (req, res) => {
     if (maxPrice !== undefined && product.price > parseFloat(maxPrice))
       return false;
 
-    if (minRating !== undefined && (product.rating ?? 0) < parseFloat(minRating))
-      return false;
-    if (maxRating !== undefined && (product.rating ?? 5) > parseFloat(maxRating))
-      return false;
+    if (rating !== undefined) {
+      const selectedRating = parseFloat(rating);
+      const detail = mock_data.product_details.find((p) => p.id === product.id);
+      const productRating = detail?.rating ?? product.rating ?? 0;
+      if (
+        productRating < selectedRating ||
+        productRating >= selectedRating + 1
+      )
+        return false;
+    }
 
     if (maxDeliveryTime !== undefined && product.deliveryTime) {
       const upperMins = parseDeliveryTimeMax(product.deliveryTime);
