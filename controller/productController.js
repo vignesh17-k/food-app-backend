@@ -46,8 +46,7 @@ const getProducts = (req, res) => {
 
     if (rating !== undefined) {
       const selectedRating = parseFloat(rating);
-      const detail = mock_data.product_details.find((p) => p.id === product.id);
-      const productRating = detail?.rating ?? product.rating ?? 0;
+      const productRating = product.rating ?? 0;
       if (
         productRating < selectedRating ||
         productRating >= selectedRating + 1
