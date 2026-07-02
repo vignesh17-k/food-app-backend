@@ -126,6 +126,20 @@ const getProductCategories = (req, res) => {
   });
 };
 
+
+//GET 
+
+const getProductsByCategory = (req, res)=>{
+  const category_id = req?.params?.id;
+  const products = mock_data?.products_data?.filter((product) => product?.categories?.includes(category_id));
+  res.status(200).json({
+    status: 200,
+    data: products,
+    message: "successfully fetched categories",
+  });
+
+};
+
 // GET
 const getProductDetails = (req, res) => {
   const product = mock_data.product_details.find(
@@ -145,4 +159,5 @@ module.exports = {
   getProductCategories,
   getPopularRails,
   getMenuRails,
+  getProductsByCategory,
 };
