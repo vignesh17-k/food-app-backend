@@ -9,17 +9,17 @@ const parseDeliveryTimeMax = (deliveryTime) => {
   return Math.max(...match.map(Number));
 };
 
-// POST /products — filters in request body
+// POST /products — body: { search, filters }
 const getProducts = (req, res) => {
+  const { search, filters = {} } = req.body;
   const {
-    search,
     minPrice,
     maxPrice,
     rating,
     maxDeliveryTime,
     maxDistance,
     tags,
-  } = req.body;
+  } = filters;
 
   const searchTerm = search?.trim().toLowerCase() || null;
 
