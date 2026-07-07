@@ -9,32 +9,26 @@ const parseDeliveryTimeMax = (deliveryTime) => {
   return Math.max(...match.map(Number));
 };
 
-// POST /products — body: { search, filters }
+// POST /products — body: { search, filters, page, limit }
 const getProducts = (req, res) => {
-  const { search, filters = {} } = req.body;
-  const {
-    minPrice,
-    maxPrice,
-    rating,
-    maxDeliveryTime,
-    maxDistance,
-    tags,
-  } = filters;
+  const { search, filters = {}, page = 1, limit = 5 } = req.body;
+  const { minPrice, maxPrice, rating, maxDeliveryTime, maxDistance, tags } =
+    filters;
 
   const searchTerm = search?.trim().toLowerCase() || null;
 
   const parsedTags = tags
     ? (Array.isArray(tags) ? tags : tags.split(",")).map((t) =>
-        String(t).trim().toLowerCase()
+        String(t).trim().toLowerCase(),
       )
     : null;
 
-  const filtered = mock_data.products_data?.filter((product) => {
+  const filtered_products = mock_data.products_data?.filter((product) => {
     if (searchTerm) {
       const nameMatch = product.name?.toLowerCase().includes(searchTerm);
       const descMatch = product.description?.toLowerCase().includes(searchTerm);
       const tagMatch = product.tags?.some((t) =>
-        t.toLowerCase().includes(searchTerm)
+        t.toLowerCase().includes(searchTerm),
       );
       if (!nameMatch && !descMatch && !tagMatch) return false;
     }
@@ -47,10 +41,7 @@ const getProducts = (req, res) => {
     if (rating !== undefined) {
       const selectedRating = parseFloat(rating);
       const productRating = product.rating ?? 0;
-      if (
-        productRating < selectedRating ||
-        productRating >= selectedRating + 1
-      )
+      if (productRating < selectedRating || productRating >= selectedRating + 1)
         return false;
     }
 
@@ -73,18 +64,40 @@ const getProducts = (req, res) => {
     return true;
   });
 
+  const current_page = Math.max(1, parseInt(page, 10) || 1);
+  const product_limit = Math.min(
+    50,
+    Math.max(1, parseInt(limit, 10) || 5),
+  );
+
+  const total = filtered_products.length;
+  const total_pages = total === 0 ? 0 : Math.ceil(total / product_limit);
+
+  const start_index = (current_page - 1) * product_limit;
+  const paginated_products = filtered_products.slice(
+    start_index,
+    start_index + product_limit,
+  );
+
   res.status(200).json({
     status: 200,
-    data: filtered,
+    data: paginated_products,
+    pagination: {
+      page: current_page,
+      limit: product_limit,
+      total,
+      total_pages,
+      has_next: current_page < total_pages,
+      has_prev: current_page > 1,
+    },
     message: "successfully fetched",
-    total: filtered.length,
   });
 };
 
 const getPopularRails = (req, res) => {
   const updated_popular_rails = mock_data.popular_rails.map((id) => {
     const product = mock_data.products_data.find(
-      (product) => product?.id === id
+      (product) => product?.id === id,
     );
     return product;
   });
@@ -100,7 +113,7 @@ const getMenuRails = (req, res) => {
   const updated_menu_rails = mock_data.menu_data?.map((menu_item) => {
     const updated_list = menu_item?.list?.map((id) => {
       const product = mock_data.products_data.find(
-        (product) => product?.id === id
+        (product) => product?.id === id,
       );
       return product;
     });
@@ -126,24 +139,23 @@ const getProductCategories = (req, res) => {
   });
 };
 
-
-//GET 
-
-const getProductsByCategory = (req, res)=>{
+//GET
+const getProductsByCategory = (req, res) => {
   const category_id = req?.params?.id;
-  const products = mock_data?.products_data?.filter((product) => product?.categories?.includes(category_id));
+  const products = mock_data?.products_data?.filter((product) =>
+    product?.categories?.includes(category_id),
+  );
   res.status(200).json({
     status: 200,
     data: products,
     message: "successfully fetched categories",
   });
-
 };
 
 // GET
 const getProductDetails = (req, res) => {
   const product = mock_data.product_details.find(
-    (product) => product?.id === req?.params?.id
+    (product) => product?.id === req?.params?.id,
   );
 
   res.status(200).json({
