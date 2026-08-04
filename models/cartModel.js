@@ -18,12 +18,16 @@ const cartSchema = new mongoose.Schema(
         image: { type: String, required: true },
         quantity: { type: Number, default: 1, required: true },
         added_at: { type: Date, default: Date.now },
+        deliveryTime: { type: String, required: true },
+        deliveryDistance: { type: Number, required: true },
+        tags: [{ type: String, required: true }],
+        rating: { type: Number, required: true },
       },
     ],
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Cart = mongoose.model("Cart", cartSchema);

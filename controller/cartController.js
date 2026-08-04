@@ -1,20 +1,30 @@
 const Cart = require("../models/cartModel");
 const asyncHandler = require("express-async-handler");
 
-const getCartDetails = asyncHandler(async (req, res) => {
+const initializeCart = asyncHandler(async (req, res, next) => {
+  try {
+    const new_cart_data = await Cart.create({
+      user_id: req?.body?.id,
+      products: [],
+    });
+    return res.status(200).json({
+      status: 200,
+      data: new_cart_data,
+      message: "Cart initialized successfully",
+    });
+  } catch (err) {
+    res.status(404);
+    next(err);
+    throw new Error("Cart not found");
+  }
+});
+
+const getCartDetails = asyncHandler(async (req, res, next) => {
   try {
     const cart_details_data = await Cart.findOne({ user_id: req?.user?.id });
 
     if (!cart_details_data) {
-      const new_cart = await Cart.create({
-        user_id: req?.user?.id,
-        products: [],
-      });
-      return res.status(200).json({
-        status: 200,
-        data: new_cart,
-        message: "Cart created successfully",
-      });
+      initializeCart(req, res, next);
     } else {
       res.status(200).json({
         status: 200,
@@ -29,7 +39,7 @@ const getCartDetails = asyncHandler(async (req, res) => {
   }
 });
 
-const updateProductToCart = asyncHandler(async (req, res) => {
+const updateProductToCart = asyncHandler(async (req, res, next) => {
   try {
     const cart_details_data = await Cart.findOne({ user_id: req?.user?.id });
 
@@ -44,4 +54,4 @@ const updateProductToCart = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { getCartDetails, updateProductToCart };
+module.exports = { getCartDetails, updateProductToCart, initializeCart };
