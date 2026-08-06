@@ -154,15 +154,15 @@ const initializeCart = asyncHandler(async (req, res) => {
 
 const getCartDetails = asyncHandler(async (req, res) => {
   try {
-    const cart_id = req?.body?.cart_id;
-    if (!cart_id) {
+    const user_id = req?.user?.id;
+    if (!user_id) {
       return res.status(400).json({
         status: 400,
-        message: "cart_id is required",
+        message: "user_id is required",
       });
     }
 
-    const cart = await Cart.findOne({ cart_id });
+    const cart = await Cart.findOne({ user_id });
     if (!cart) {
       return res.status(404).json({
         status: 404,
