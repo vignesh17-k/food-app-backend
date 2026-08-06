@@ -56,8 +56,8 @@ const formatCartResponse = (cart) => {
   };
 };
 
-const getOrCreateCart = async (user_id) => {
-  let cart = await Cart.findOne({ user_id });
+const getOrCreateCart = async (cart_id, user_id) => {
+  let cart = await Cart.findOne({ cart_id });
   if (!cart) {
     cart = await Cart.create({
       cart_id: uuidv4(),
@@ -154,15 +154,15 @@ const initializeCart = asyncHandler(async (req, res) => {
 
 const getCartDetails = asyncHandler(async (req, res) => {
   try {
-    const user_id = req?.user?.id;
-    if (!user_id) {
+    const cart_id = req?.body?.cart_id;
+    if (!cart_id) {
       return res.status(400).json({
         status: 400,
-        message: "user_id is required",
+        message: "cart_id is required",
       });
     }
 
-    const cart = await Cart.findOne({ user_id });
+    const cart = await Cart.findOne({ cart_id });
     if (!cart) {
       return res.status(404).json({
         status: 404,
@@ -186,13 +186,14 @@ const getCartDetails = asyncHandler(async (req, res) => {
 // Update: { product_id, cart_item_id, quantity }  (quantity 0 = remove)
 const updateProductToCart = asyncHandler(async (req, res) => {
   try {
-    const user_id = req?.user?.id 
+    const cart_id = req?.body?.cart_id;
+    const user_id = req?.user?.id;
     const { product_id, selectedSize, quantity = 1, cart_item_id } = req.body;
 
-    if (!user_id) {
+    if (!cart_id) {
       return res.status(400).json({
         status: 400,
-        message: "user_id is required",
+        message: "cart_id is required",
       });
     }
     if (!product_id) {
@@ -210,7 +211,7 @@ const updateProductToCart = asyncHandler(async (req, res) => {
       });
     }
 
-    const cart = await getOrCreateCart(user_id);
+    const cart = await getOrCreateCart(cart_id , user_id);
 
     // Update / remove existing line by cart_item_id
     if (cart_item_id) {
@@ -331,8 +332,8 @@ const updateProductToCart = asyncHandler(async (req, res) => {
 // Body: { product_id, cart_item_id }
 const removeProductFromCart = asyncHandler(async (req, res) => {
   try {
-    const user_id = req?.user?.id;
-    const { product_id, cart_item_id , cart_id } = req.body;
+    const cart_id = req?.body?.cart_id;
+    const { product_id, cart_item_id  } = req.body;
 
     if (!product_id || !cart_item_id || !cart_id) {
       return res.status(400).json({
