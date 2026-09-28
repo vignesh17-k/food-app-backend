@@ -56,6 +56,17 @@ const formatCartResponse = (cart) => {
   };
 };
 
+const formatCartLineItem = (item) => {
+  if (!item) return null;
+  const line = item?._doc || item;
+  return {
+    product_id: line.product_id,
+    cart_item_id: line.cart_item_id,
+    quantity: line.quantity,
+    selectedSize: line.selectedSize,
+  };
+};
+
 const getOrCreateCart = async (cart_id, user_id) => {
   let cart = await Cart.findOne({ cart_id });
   if (!cart) {
@@ -233,7 +244,6 @@ const updateProductToCart = asyncHandler(async (req, res) => {
         await cart.save();
         return res.status(200).json({
           status: 200,
-          data: formatCartResponse(cart),
           message: "Cart item removed successfully",
         });
       }
@@ -251,7 +261,7 @@ const updateProductToCart = asyncHandler(async (req, res) => {
 
       return res.status(200).json({
         status: 200,
-        data: formatCartResponse(cart),
+        data: formatCartLineItem(variantsMap.get(cart_item_id)),
         message: "Cart item updated successfully",
       });
     }
@@ -302,7 +312,7 @@ const updateProductToCart = asyncHandler(async (req, res) => {
 
       return res.status(200).json({
         status: 200,
-        data: formatCartResponse(cart),
+        data: formatCartLineItem(variantsMap.get(existingId)),
         message: "Cart item quantity updated successfully",
       });
     }
@@ -319,7 +329,7 @@ const updateProductToCart = asyncHandler(async (req, res) => {
 
     return res.status(200).json({
       status: 200,
-      data: formatCartResponse(cart),
+      data: formatCartLineItem(variantsMap.get(new_cart_item_id)),
       message: "Product added to cart successfully",
     });
   } catch (err) {
@@ -358,6 +368,7 @@ const removeProductFromCart = asyncHandler(async (req, res) => {
       });
     }
 
+    const removedItem = variantsMap.get(cart_item_id);
     variantsMap.delete(cart_item_id);
     if (variantsMap.size === 0) {
       cart.products.delete(product_id);
@@ -369,7 +380,7 @@ const removeProductFromCart = asyncHandler(async (req, res) => {
 
     return res.status(200).json({
       status: 200,
-      data: formatCartResponse(cart),
+      data: formatCartLineItem(removedItem),
       message: "Cart item removed successfully",
     });
   } catch (err) {
