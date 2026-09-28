@@ -846,8 +846,7 @@ const mock_data = {
       deliveryDistance: 0.5,
       tags: ["veg", "drink", "japanese", "healthy", "hot"],
       rating: 3.9,
-    }
-,
+    },
     {
       id: "e1f2a3b4-c5d6-7890-1234-abcdef012345",
       name: "Lobster Roll",
@@ -2107,8 +2106,7 @@ const mock_data = {
       fullDescription:
         "Premium ceremonial-grade matcha whisked with steamed milk for a smooth, earthy, and lightly sweet latte.",
       sizes: ["Small", "Medium", "Large"],
-    }
-,
+    },
     {
       id: "e1f2a3b4-c5d6-7890-1234-abcdef012345",
       name: "Lobster Roll",
@@ -2484,7 +2482,7 @@ const mock_data = {
         "b79138e9-9f7d-4ae2-8653-af3d76c62684",
         "5fa62ee1-c71a-4a5e-810c-b0fd654f14e4",
         "eff6964e-5048-4e7c-b408-bac08fcae10f",
-        "471b5189-59bc-4601-a09c-00133f4b92c7",,
+        "471b5189-59bc-4601-a09c-00133f4b92c7",
         "e1f2a3b4-c5d6-7890-1234-abcdef012345",
         "f2a3b4c5-d6e7-8901-2345-bcdef0123456",
         "a3b4c5d6-e7f8-9012-3456-cdef01234567",
